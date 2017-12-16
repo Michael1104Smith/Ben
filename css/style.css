@@ -1,0 +1,86 @@
+body{
+    background: #ccddff;
+}
+.whole-side,
+#top10{
+    background: linear-gradient(rgb(229, 239, 250), rgb(254, 254, 255));
+}
+.container{
+    /* width: 1400px;
+    margin:0 auto; */
+}
+.left-side{
+    width:49%;
+    float:left;
+}
+.right-side{
+    width:50%;
+    margin-left:1%;
+    float:left;
+}
+#GSM{
+    height: 400px;
+}
+#YSbS{
+    height:300px;
+}
+.panel{
+    width: 100%;
+    margin-top:10px;
+    background: none;
+}
+.borderp{
+    border:1px solid #b5a07d;
+}
+.h-panel{
+    width:49%;
+    height: 300px;
+    float:left;
+}
+#GSL{
+    margin-left:1.1%;
+}
+#SCG,
+#CSG,
+#CCS{
+    height:300px;
+}
+.whole-side .panel{
+    padding: 10px 0;
+    text-align: center;
+}
+#dialog{
+    display: none;
+}
+@media all and (max-width: 768px) {
+    .container {
+        width: 100%;
+    }
+    .left-side,
+    .right-side{
+        width: 100%;
+        margin: 0 auto;
+    }
+}
+
+@media (min-width: 1600px) {
+    .container {
+        width: 1400px
+    }
+}
+
+.left_label{
+    float:left;
+}
+.right_label{
+    float:right;
+}
+
+#top10{
+    padding:10px;
+}
+
+.side{
+    float: left;
+    width: 100%;
+}
