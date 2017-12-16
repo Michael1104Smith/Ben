@@ -84,3 +84,7 @@ body{
     float: left;
     width: 100%;
 }
+
+#Inventory{
+    height:200px;
+}

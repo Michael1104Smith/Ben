@@ -32,6 +32,7 @@
                 </div>
                 <div id="SCG" class="panel borderp"></div>
                 <div id="CSG" class="panel borderp"></div>
+                <div id="Inventory" class="panel borderp"></div>
             </div>
             <div class="side">
                 <div class="panel borderp">
@@ -69,6 +70,8 @@
     <script src="js/d3.v4.min.js"></script>
     <script src="js/highcharts.js"></script>
     <!-- <script src="js/exporting.js"></script> -->
+    <script src="js/highcharts-more.js"></script>
+    <script src="js/solid-gauge.js"></script>
     <script src="js/jquery.js"></script>
     <script src="js/jquery-ui.js"></script>
     <script src="js/bootstrap.min.js"></script>
@@ -171,7 +174,6 @@
                 $('#top10_inner').html(html);
             });
             d3.csv("data/Cust_Category_Sales.csv", function(data){
-                console.log(data);
                 var CCS_Data = [], i;
                 for(i = 0; i < data.length; i++){
                     CCS_Data.push({name:data[i].source+" Sales LY", data:[0,0,0,0,0,0,0,0,0,0,0,0]});
@@ -196,6 +198,10 @@
                 }
                 drawLineChart('CCS', 'Cummulative Sales Graph by Debtor Type', CCS_Data);
             });
+            d3.csv("data/Inventory.csv", function(data){
+                console.log(data);
+                drawGauge("Inventory", data[0].name, parseInt(data[0].total), 200000);
+            })
         });
     </script>
 </html>
